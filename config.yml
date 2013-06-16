@@ -1,0 +1,10 @@
+# config for callerid.rb
+
+:action_url: "/usr/bin/chromium-browser localhost:3000/callerid/###callerid###?skip=0"
+:serial:
+  :device: /dev/ttyS0
+  :baudrate: 38400
+  :databits: 8
+  :stopbits: 1
+  :parity: 0
+  :initstring: "AT&F E1 M0L0 S22=1 +IMSN0=50 S153=7"
