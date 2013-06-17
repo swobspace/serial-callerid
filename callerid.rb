@@ -15,11 +15,7 @@ stopbits      = SERIAL[:stopbits]   || 1
 parity        = SERIAL[:parity]     || 0
 initstring    = SERIAL[:initstring] || "ATZ"
 
-SerialPort.open(serial_device, 
-                    :baudrate => baudrate,
-      		    :databits => databits,
-      		    :stopbits => stopbits,
-      		    :parity => parity ) do |s|
+SerialPort.open(serial_device, baudrate, databits, stopbits, parity) do |s|
 
   puts "#{s.baud} [#{s.data_bits} #{s.parity} #{s.stop_bits}]"
   s.write "#{initstring}\r"
